@@ -11,4 +11,4 @@ An institutional-grade econometric analysis investigating the structural drivers
 
 ## Methodological Overview
 * **Data Horizon:** Q1 1995 to Q4 2025 (Explicitly truncated to prevent reporting lag gaps).
-* **Identification Strategy:** Parsimonious multiple linear regression with country-level clustered standard errors to account for serial correlation.
+* **Identification Strategy:** Parsimonious multiple linear regression with country-level clustered standard errors to account for serial correlation. 
