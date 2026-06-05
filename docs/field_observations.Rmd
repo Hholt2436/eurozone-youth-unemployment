@@ -7,6 +7,16 @@ output: html_document
 **Location:** Salamanca, Spain
 
 * **[Workplace]:** My colleagues in the Chamber of Commerce all appeared to be mid to late career professionals, the absence of young professionals in my workplace could be attributable to the lack of young talent in the corporate sector or a unique occurrence in the office
-* **[Sentiment]:** My host brother (age 40) informed me that Salamanca's local economy is dominated by the service industry and that many of his friends (presumably mid-career aged professionals) work as waiters, the latter piece of information seems to be a result of their local economy and age (they were young professionals during the Eurozone crisis).   
+* **[Sentiment]:** My host brother (age 40) informed me that Salamanca's local economy is dominated by the service industry and that many of his friends (presumably mid-career aged professionals) work as waiters, the latter piece of information seems to be a result of their local economy and age (they were young professionals during the Eurozone crisis).  
+
+## Date: June 3rd, 2025
+**Location** Salamanca, Spain
+
 **[Sentiment]:** During my conversation in the park today with a retired farmer, he commented that the EU's free trade agreement with MERCOSUR disadvantages the region's farmers and leads to urban flight (given that most small farms in the region are familial enterprises, it seems that an increasingly uncompetitive agricultural industry could lead to oversaturation in urban job markets spurred on by young adults discontinuing the family business)
 **[Workplace]:** In my role at the Chamber of Commerce I have noticed multiple young adults meet with my associates for help finding employment. Furthermore, one of my office's main functions is hosting workshops concerned with developing human capital in the youth population.
+
+## Date: June 5th, 2026
+**Location**: Salamanca, Spain
+
+**[Macro]**: Observed in the local news that over 100 small businesses in the province are searching for a new owner because their current one is new retirement age (this statistic suggests a dearth of mid-career professionals who are able to fill such roles: This could be a result of labor market rigidity. Qualified professionals with the skill to serve as owners are in protected jobs elsewhere. Alternatively, those that could have filled the role never developed the necessary human capital to do so because of dual labor market dynamics).
+**[Personal]**: My work with DAGs, paired with lived experiences in Salamanca, has caused the framework with which I'll approach my regression model to change. I must control for unobserved cultural/historical confounders (influential in both GDP and labor market rigidity) to prove that labor market rigidity is a structural driver of youth unemployment. I must also control for GDP growth rate, as it could bias my results according to the business cycle and other macro-trends that influence cyclical unemployment. 
