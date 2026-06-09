@@ -1,3 +1,7 @@
+library(tidyverse)
+library(lubridate)
+library(fredr)
+library(countrycode)
 #Harmonized Quarterly Youth Unemployment Rate (Outcome Variable: Y)
 target_series <- tibble(
   series_id = c("LRUN24TTESQ156S", 
@@ -42,3 +46,31 @@ raw_gdp_growth <-
     )
   }) |> 
   left_join(target_series_2, by = "series_id")
+#OECD EPL Indexes
+raw_epl <- read_csv("data-raw/raw_epl.csv")
+#Data Harmonization
+#EPL Data
+processed_epl <- raw_epl |> 
+  mutate(
+    iso2c = countrycode(REF_AREA, 
+                        origin = "iso3c",
+                        destination = "iso2c"),
+    join_year = as.integer(TIME_PERIOD)
+  ) |> 
+  select(iso2c, join_year, Measure, OBS_VALUE)
+#Quarterly Data (Real GDP Growth & Youth Unemployment)
+processed_youth_unemp <- raw_youth_unemp |> 
+  mutate(
+    join_year = year(date),
+    iso2c = country_code
+  ) |> 
+  select(iso2c, date, 
+         join_year, region, 
+         youth_unemp_rate = value)
+processed_gdp_growth <- raw_gdp_growth |> 
+  mutate(
+    join_year = year(date),
+    iso2c = country_code
+  ) |> 
+  select(iso2c, date,
+         join_year, gdp_growth_rate = value)
