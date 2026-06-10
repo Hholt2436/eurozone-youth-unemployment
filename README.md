@@ -10,7 +10,7 @@ An institutional-grade econometric analysis investigating the structural drivers
 * `docs/`: Qualitative field observations and policy brief drafts.
 
 ## Methodological Overview
-* **Data Horizon:** Q1 1995 to Q4 2025 (Explicitly truncated to prevent reporting lag gaps).
+* **Data Horizon:** Q1 2005 to Q4 2019 (Explicitly truncated to prevent reporting lag gaps).
 * **Econometric Framework:** Two-Way Entity Fixed Effects (FE) panel regression to isolate within-country regulatory shifts and absorb time-invariant institutional confounding.
 * **Statistical Correction:** Country-level clustered standard errors to ensure inference consistency in the presence of time-series serial correlation and heteroskedasticity.
 
