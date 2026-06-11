@@ -101,3 +101,9 @@ eurozone_macro_clean <- processed_youth_unemp |>
             as.Date("2019-10-01"))
   ) |> 
   drop_na(epl_index)
+#Saving Cleaned Data
+write.csv(
+  eurozone_macro_clean,
+  file = "data-clean/eurozone_macro_clean.csv",
+  row.names = FALSE
+)
