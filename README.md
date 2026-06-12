@@ -53,6 +53,7 @@ estimated under the same two-way fixed effects interaction design. The temporary
 * **Sticky treatment variable:** The regular-contract EPL index exhibits minimal within-country variation over the sample period. The interaction specification addresses this directly: the moderating effect is identified even where the level effect is not, and the duality specification draws on the richer within-country variation of the temporary-contract series.
 * **Reverse causality (Y → D):** Crisis-era unemployment plausibly motivates labor market reform. Acknowledged in the DAG and partially addressed via a lagged-EPL robustness specification; not fully resolved.
 * **External validity:** The panel covers four economies within a single currency union. Findings characterize the Eurozone core and Spain specifically, and should not be extrapolated to flexible-exchange-rate or emerging labor markets.
+* **Treatment scope (individual dismissals only):** The Version 1 regular-contracts indicator captures the cost of dismissing individual permanent workers but excludes collective-dismissal procedures — a relevant adjustment margin during recessions. The treatment is therefore best interpreted as the individual insider firing cost central to the duality mechanism, rather than the full regulatory burden of crisis-era workforce reductions.
 
 ## Reproducibility
 
@@ -70,8 +71,9 @@ Scripts are numbered and should be executed in order:
 
 * Youth Unemployment Rate (15–24, quarterly): FRED series IDS `LRUN24TTESQ156S`, `LRUN24TTDEQ156S`, `LRUN24TTFRQ156S`, `LRUN24TTITQ156S`
 * Real GDP Growth Rate (quarterly): FRED series `CLVMNACSCAB1GQES`, `CLVMNACSCAB1GQDE`, `CLVMNACSCAB1GQFR`, `CLVMNACSCAB1GQIT`
-* Employment Protection Legislation — regular contracts (annual): OECD `EPRC` indicator, version 1, through 2019 
+* Employment Protection Legislation — individual dismissals, regular contracts (annual): OECD `EPR` indicator, version 1, through 2019 
 * Employment Protection Legislation — temporary contracts (annual): OECD `EPT` indicator, version 1, through 2019
+* Version 1 is used for both indicators as it is the only vintage providing consistent regular- and temporary- contract measures across the full sample period; Version3 begins in 2008 and would exclude the pre-crisis baseline.
 
 **Environment:** R version and package versions are recorded in `sessionInfo.txt` at the root of this repository.
 
