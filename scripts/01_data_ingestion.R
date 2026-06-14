@@ -1,7 +1,6 @@
 library(tidyverse)
 library(lubridate)
 library(fredr)
-library(eurostat)
 library(countrycode)
 #Harmonized Quarterly Youth Unemployment Rate (Outcome Variable: Y)
 target_series <- tibble(
@@ -37,7 +36,7 @@ target_series_2 <- tibble(
   region = c("Periphery", "Core", 
              "Core", "Periphery")
 )
-raw_gdp_growth <- 
+raw_gdp <- 
   target_series_2$series_id |> 
   map_df(function(id) {
     fredr(

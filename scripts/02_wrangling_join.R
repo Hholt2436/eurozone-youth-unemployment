@@ -1,14 +1,10 @@
 library(tidyverse)
 library(lubridate)
 library(fredr)
-library(eurostat)
 library(countrycode)
 #Data Harmonization
 #EPL Data
 processed_epl <- raw_epl |> 
-  mutate(Measure = recode(Measure,
-                          "Individual and collective dismissals (regular contracts)" =
-                            "Individual dismissals (regular contracts)")) |> 
   mutate(
     iso2c = countrycode(REF_AREA, 
                         origin = "iso3c",
@@ -27,7 +23,7 @@ processed_youth_unemp <- raw_youth_unemp |>
   select(iso2c, date, 
          join_year, region, 
          youth_unemp_rate = value)
-processed_gdp_growth <- raw_gdp_growth |> 
+processed_gdp_growth <- raw_gdp |> 
   arrange(country_code, date) |> 
   group_by(country_code) |> 
   mutate(
