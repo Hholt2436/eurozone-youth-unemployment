@@ -28,6 +28,7 @@ To identify whether labor market stringency amplifies the transmission of cyclic
 * **Observed Cyclical Confounder (X):** Real GDP Growth Rate — both a cyclical control and the shock variable whose transmission to youth unemployment is hypothesized to vary with EPL strictness (identifying variation: the 2008–2013 Eurozone crisis).
 * **Unobserved Confounders (U):** Time-invariant country-specific structures (cultural norms, baseline safety nets), absorbed by country fixed effects. Time-varying country-specific unobservables (e.g., reform sentiment, education policy shifts) remain a limitation.
 * **Reverse Causality (Y → D):** Crisis-era unemployment plausibly drives labor market reform (e.g., Spain's 2012 reform). This pathway is acknowledged in the DAG and partially addressed via a lagged-EPL robustness specification; it is not fully resolved.
+* **Reverse Causality (Y → X):** Crisis-era youth unemployment plausibly decreases aggregate demand, leading to diminished GDP Growth. This pathway is acknowledged in the DAG and bounded by the argument that although youth disproportionately absorb the effects of recession (in terms of unemployment), they are a small share of total demand and output, positioning feedback from youth unemployment to GDP as second order; it is not fully resolved.
 
 ### Structural Equation
 
@@ -51,7 +52,8 @@ estimated under the same two-way fixed effects interaction design. The temporary
 
 * **Small number of clusters (N=4):** Country-level clustered standard errors are asymptotically unreliable with four clusters (Bertrand, Duflo & Mullainathan, 2004). Inference is supplemented with a wild-cluster bootstrap as a robustness check.
 * **Sticky treatment variable:** The regular-contract EPL index exhibits minimal within-country variation over the sample period. The interaction specification addresses this directly: the moderating effect is identified even where the level effect is not, and the duality specification draws on the richer within-country variation of the temporary-contract series.
-* **Reverse causality (Y → D):** Crisis-era unemployment plausibly motivates labor market reform. Acknowledged in the DAG and partially addressed via a lagged-EPL robustness specification; not fully resolved.
+* **Reverse causality (Y → D):** Crisis-era youth unemployment plausibly motivates labor market reform. Acknowledged in the DAG and partially addressed via a lagged-EPL robustness specification; not fully resolved.
+* **Reverse causality (Y → X):** Crisis-era youth unemployment plausibly decreases aggregate demand, thereby weakening total output. Acknowledged in DAG and bounded by the argument that youth are a small share of demand and output, positioning feedback from youth unemployment to GDP as second order; not fully resolved.
 * **External validity:** The panel covers four economies within a single currency union. Findings characterize the Eurozone core and Spain specifically, and should not be extrapolated to flexible-exchange-rate or emerging labor markets.
 * **Treatment scope (individual dismissals only):** The Version 1 regular-contracts indicator captures the cost of dismissing individual permanent workers but excludes collective-dismissal procedures — a relevant adjustment margin during recessions. The treatment is therefore best interpreted as the individual insider firing cost central to the duality mechanism, rather than the full regulatory burden of crisis-era workforce reductions.
 
