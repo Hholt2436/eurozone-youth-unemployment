@@ -4,7 +4,8 @@ fed_core_gold <- "#B1812C"
 fed_core_gray <- "#9FA1A8"
 fed_spain_red <- "#B84545"
 
-my_fed_palette <- c(fed_core_blue, 
-                    fed_core_gold, 
-                    fed_core_gray, 
-                    fed_spain_red)
+country_colors <- c(
+  DE = fed_core_blue, 
+  ES = fed_spain_red, 
+  FR = fed_core_gray, 
+  IT = fed_core_gold)
