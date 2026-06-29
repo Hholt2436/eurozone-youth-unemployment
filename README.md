@@ -2,8 +2,10 @@
 
 Does strict employment protection amplify youth unemployment during downturns? An econometric analysis of labor market duality across four Eurozone economies (ES, DE, FR, IT), grounded in comparative regional fieldwork in Spain.
 
-<!-- HEADLINE FIGURE: after the dashboard is built (July 1), embed strongest panel here: -->
-<!-- ![Youth unemployment vs. GDP growth, by EPL regime](outputs/headline_figure.png) -->
+
+![Youth unemployment vs. GDP growth, by country, 2005–2019 (crisis quarter highlighted)](outputs/headline_figure.png) -->
+
+*The graph above depicts the raw, bivariate, contemporaneous association between youth unemployment level and QoQ real GDP growth rate for Germany, Spain, Italy, and France during 2005-2019. The slopes for the observed countries differ greatly. Spain’s slope is negative and steep. Germany and France’s slopes are nearly flat. And Italy’s slope is positive and shallow, serving as the clearest symptom of the marked flow-level dynamic that muddles the association between the independent and dependent variables beyond what the presence of confounding variables already contributes. That being said, the differences in slopes motivates my hypothesis that country-specific labor protection regulation strictness amplifies increases in youth unemployment levels during periods of negative growth. Indeed, this theorized amplification effect,  represented in the coefficient β₁, is what my regression model seeks to confirm or deny.
 
 ## Project Structure
 
@@ -39,13 +41,13 @@ $$Y_{it} = \beta_1 (D_{it} \times X_{it}) + \beta_2 X_{it} + \alpha_i + \gamma_t
 
 Where $\alpha_i$ denotes country fixed effects (absorbing time-invariant unobservables $U$), and $\gamma_t$ denotes quarter fixed effects (absorbing common Eurozone shocks such as monetary policy and the 2008–2013 crisis). The coefficient of interest is $\beta_1$, which captures whether the transmission of GDP shocks to youth unemployment intensifies under stricter employment protection.
 
-**Note on identification:** the level effect of $D$ is largely absorbed by $\alpha_i$, given the limited within-country variation in regular-contract EPL (Germany's index is constant across the entire sample). Identification of $\beta_1$ therefore relies on cross-country differences in EPL levels interacting with within-country cyclical variation — principally the 2008–2013 Eurozone crisis.
+**Note on identification:** The level effect of $D$ is largely absorbed by $\alpha_i$ for countries with regular-contract EPL index variation, while for Germany, it is strictly not identified due to the lack of variation. Given the limited amount and, in one case, lack of within-country variation in regular-contract EPL, identification of $\beta_1$ therefore relies on cross-country differences in EPL levels interacting with within-country cyclical variation — principally the 2008–2013 Eurozone crisis.
 
 ### Secondary Specification: Labor Market Duality
 
 Spain's youth unemployment dynamics are widely attributed to its dual labor market: strict protection for permanent insiders alongside flexible temporary contracts on which young workers are concentrated, making temporary employment the margin of adjustment in downturns (Bentolila, Dolado & Jimeno). A secondary specification therefore uses the regular–temporary EPL gap as the treatment:
 
-$$\text{epl\_gap}_{it} = \text{EPL}^{regular}_{it} - \text{EPL}^{temporary}_{it}$$
+$$\text{EPL}_{\text{gap}} = \text{EPL}^{regular}_{it} - \text{EPL}^{temporary}_{it}$$
 
 estimated under the same two-way fixed effects interaction design. The temporary-contract series exhibits substantially more within-country reform variation than the regular-contract series (notably Italy and Spain), making this specification a meaningful test of whether duality — rather than regular-contract strictness per se — drives the amplification effect.
 
