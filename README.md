@@ -69,7 +69,8 @@ Scripts are numbered and should be executed in order:
 2. `scripts/02_wrangling_join.R` — key harmonization, asymmetric left join, truncation at Q4 2019
 3. `scripts/03_eda.R` — long-to-wide pivot, gap construction, panel validation
 4. `scripts/04_visualization.R` — dashboard construction
-5. `scripts/05_regression.R` — two-way FE estimation and robustness checks
+5. `scripts/04b_dag.R` — formalized DAG construction
+6. `scripts/05_regression.R` — two-way FE estimation and robustness checks
 
 **Data format note:** `data-clean/eurozone_macro_clean.csv` is stored in long format (one row per country-quarter-measure; 480 rows). Analysis scripts pivot to wide format (240 country-quarter observations) before constructing `epl_gap` and estimating any model.
 
