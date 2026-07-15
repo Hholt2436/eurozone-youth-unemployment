@@ -19,7 +19,7 @@ Does strict employment protection amplify youth unemployment during downturns? A
 
 * **Data Horizon:** Q1 2005 to Q4 2019 (constrained by treatment data vintage, with the side benefit of excluding the pandemic structural break).
 * **Econometric Framework:** Two-way fixed effects (country and quarter) panel regression to absorb time-invariant institutional confounding and common Eurozone shocks.
-* **Statistical Correction:** Country-level clustered standard errors to address serial correlation, with a wild-cluster bootstrap as a robustness check given the small number of clusters (N=4).
+* **Statistical Correction:** Country-level clustered standard errors to partially address serial correlation, with an enumerated wild-cluster bootstrap as a robustness check given the small number of clusters (N=4).
 
 ### Causal Identification Strategy (DAG Framework)
 
@@ -53,7 +53,7 @@ estimated under the same two-way fixed effects interaction design. The temporary
 
 ## Limitations
 
-* **Small number of clusters (N=4):** Country-level clustered standard errors are asymptotically unreliable with four clusters (Bertrand, Duflo & Mullainathan, 2004). Inference is supplemented with a wild-cluster bootstrap as a robustness check.
+* **Small number of clusters (N=4):** Country-level clustered standard errors are asymptotically unreliable with four clusters (Bertrand, Duflo & Mullainathan, 2004). Inference is supplemented with an enumerated wild-cluster bootstrap as a robustness check.
 * **Sticky treatment variable:** The regular-contract EPL index exhibits minimal within-country variation over the sample period. The interaction specification addresses this directly: the moderating effect is identified even where the level effect is not, and the duality specification draws on the richer within-country variation of the temporary-contract series.
 * **Reverse causality (Y → D):** Crisis-era youth unemployment plausibly motivates labor market reform. Acknowledged in the DAG and partially addressed via a lagged-EPL robustness specification; not fully resolved.
 * **Reverse causality (Y → X):** Crisis-era youth unemployment plausibly decreases aggregate demand, thereby weakening total output. Acknowledged in DAG and bounded by the argument that youth are a small share of demand and output, positioning feedback from youth unemployment to GDP as second order; not fully resolved.
